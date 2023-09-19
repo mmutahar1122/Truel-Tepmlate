@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Truel</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+  </head>
+  <style>
+      #heading-style{
+      width: 200px;
+    }
+    #heading-container{
+      display: flex;
+      width: 18rem;
+      height: 70px;
+      z-index: 10;
+      margin: auto;
+      margin-top: -40px;
+}
+    #JackPot-container {
+      background-color: #5e71f4;
+      height: 220px;
+      width: 200px;
+      margin: auto;
+      top: 100px;
+    }
+    #JackPot-img{
+        width: 18rem;
+        height: 60px;
+        display: flex;
+        margin: auto;
+        position: relative;
+        bottom: -25px;
+        z-index: 1;
+        color: white;
+        background:  #b66ce8;
+        justify-content: center;
+    }
+    #jackpot-icon{
+      height: 40px;
+      width: 40px;
+  margin-left: 90px;
+  margin-top: -100px;
+  z-index: 10;
+    }
+    #Pick-One-icon, #Wait-list-icon{
+      height: 40px;
+      width: 40px;
+  margin-left: 90px;
+  margin-top: -77px;
+  z-index: 10;
+    }
+    #JackPot-Value-box {
+      height: 90px;
+      border: 5px solid white;
+      background: transparent;
+      position: relative;
+      margin: auto;
+      border-radius: 10px;
+    }
+    #JackPot-name,#Waitlist-name,#Pick-one-name{
+      color: white;
+      position: relative;
+      margin: auto;
+      margin-top: -35px;
+      z-index: 10;
+    }
+
+    #JackPot-Value-box h2 {
+      color: white;
+      position: relative;
+      margin: auto;
+    }
+    #Pick-One {
+      background-color: #5e71f4;
+      height: 180px;
+      width: 200px;
+      margin: auto;
+      display: flex;
+      top: 200px;
+    }
+    #Pick-one-box-container{
+      background: none;
+    border: none;
+    }
+
+    #pick-one-left{
+      background:  #5e71f4;
+      margin: auto;
+      display: flex;
+      top: 200px;
+    }
+   #pick-one-left img{
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      top: 50px;
+      
+    }
+    #pick-one-left  #pick-one-Right,
+    #pick-one-left  #pick-one-Miss,
+    #pick-one-left  #pick-one-Left{
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      margin-left: -95px;
+      top: 15px;
+    }
+    #pick-one-left #Right,#pick-one-left #Left,#pick-one-left #Miss{
+      /* height: 50px;
+      width: 50px; */
+      position: absolute;
+      margin-left: 42px;
+      top: 80px;
+      color: white;
+    }
+    #Waitlist-container{
+      background-color: #5e71f4;
+      height: 300px;
+      width: 200px;
+      margin: auto;
+      top: 300px;
+    }
+    #waitlist-ul , #Result-ul{
+      /* margin-left: 55px; */
+      position: relative;
+      width: 350px;
+      margin: auto;
+      background: none;
+      margin-top: 50px;
+
+    }
+    #waitlist-ul ul , #Result-ul ul{
+      justify-content: space-between;
+
+    }
+   #waitlist-ul ul li , #Result-ul ul li{
+    background: none;
+    border: none;
+    color: white;
+    background: none;
+   }
+   #waitlist-ul ul li img ,#Result-ul ul li img{
+height: 30px;
+width: 30px;
+   }
+   #Result-container{
+    background-color: #5e71f4;
+      height: 300px;
+      width: 200px;
+      margin: auto;
+      top: 400px;
+
+   }
+  
+   #Bonus-Area{
+    background:  #5e71f4;
+      margin: auto;
+      display: flex;
+      top: 500px;
+
+   }
+ #Bonus-name{
+    color: white;
+      position: relative;
+      margin: auto;
+      margin-top: -35px;
+      z-index: 10;
+
+   }
+   #Bonus-icon{
+    height: 40px;
+      width: 40px;
+  margin-left: 90px;
+  margin-top: -55px;
+  z-index: 10;
+   }
+   #Bonus-box-container{
+    margin-top: 20px;
+    padding: 20px;
+   }
+   #bonus-boxes{
+    background:  #5e71f4;
+      margin: auto;
+      display: flex;
+      top: 200px;
+
+   }
+   #bonus-boxes img{
+    background-color:  #5e71f4;
+      margin: auto;
+      display: flex;
+      top: 200px;
+      margin: 20px;
+      height: 90px;
+   }
+   #Balance-container{
+    background:  #5e71f4;
+    height: 300px;
+      margin: auto;
+      display: flex;
+      top: 600px;
+   }
+   #Balance-icon{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    margin-left: 90px;
+    margin-top: -25px;
+    z-index: 10;
+   }
+   #Balance-container #balance-name{
+    color: white;
+      position: absolute;
+      margin: auto;
+      margin-left: 180px;
+      margin-top: -27px;
+      z-index: 10;
+   }
+   #Bonus-box-container{
+    background: none;
+    border: none;
+   }
+  </style>
+  <body>
+    <div class="card" id="JackPot-container" style="width: 28rem">
+      <img src="images/heading style.PNG" class="card-img-top" alt="" id="heading-container">
+      <img src="images/jackpot-icon.png" alt="" id="jackpot-icon">
+      <h3 id="JackPot-name">JackPot</h3>
+      <div class="card" id="JackPot-Value-box" style="width: 20rem">
+        <h2>10,000.00</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" id="Pick-One" style="width: 28rem">
+    <img src="images/heading style.PNG" class="card-img-top" alt="" id="heading-container">
+    <img src="images/Pick-one-icon-01.png" alt="" id="Pick-One-icon">
+    <h3 id="Pick-one-name">Pick One</h3>
+    <div class="card" id="Pick-one-box-container">
+     <div id="pick-one-left">
+      <div>
+         <img class="box-img icon-box" src="images/Green-box.PNG" alt="">
+         <img id="pick-one-Left" src="images/Left-01.png" alt="">
+         <h3 id="Left">Left</h3>
+      </div>
+      <div class="Resolver-left">
+        <img  class="box-img icon-box" src="images/Orange-box.PNG" alt="">
+        <img id="pick-one-Miss" src="images/Miss-01.png" alt="">
+        <h3 id="Miss">Miss</h3>
+      </div>
+      <div>
+        <img  class="box-img icon-box" src="images/Pink-box.PNG" alt="">
+        <img id="pick-one-Right" src="images/Right-01.png" alt="">
+        <h3 id="Right">Right</h3>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="card" id="Waitlist-container" style="width: 28rem">
+  <img src="images/heading style.PNG" class="card-img-top" alt="" id="heading-container">
+  <img src="images/stopwatch-01-01.png" alt="" id="Wait-list-icon">
+  <h3 id="Waitlist-name">Waitlist</h3>
+  <div id="waitlist-ul">
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item">21</li>
+    <li class="list-group-item"><img src="images/handgun-01.png" alt="" ></li>
+    <li class="list-group-item">0x6c8258d3</li>
+  </ul>
+  <ul class="list-group list-group-horizontal " >
+    <li class="list-group-item">22</li>
+    <li class="list-group-item"><img src="images/target-01.png" alt=""></li>
+    <li class="list-group-item">0x6c4364d9</li>
+  </ul>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item">23</li>
+    <li class="list-group-item"> <img src="images/resolver-01.png" alt=""> </li>
+    <li class="list-group-item">0x6c5358d8</li>
+  </ul>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item">24</li>
+    <li class="list-group-item"><img src="images/canon-01.png" alt=""></li>
+    <li class="list-group-item">0x6c8546d6</li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="card" id="Result-container" style="width: 28rem">
+  <img src="images/heading style.PNG" class="card-img-top" alt="" id="heading-container">
+  <img src="images/experiment-results-01.png" alt="" id="Wait-list-icon">
+  <h3 id="Waitlist-name">Results</h3>
+  <div id="Result-ul">
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item">#531</li>
+    <li class="list-group-item"><img src="images/Like-01.png" alt="" style="height: 30px; width: 30px; "></li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+  </ul>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item">#532</li>
+    <li class="list-group-item"><img src="images/Like-01.png" alt=""></li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+  </ul>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item">#533</li>
+    <li class="list-group-item"> <img src="images/Like-01.png" alt=""> </li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+  </ul>
+  <ul class="list-group list-group-horizontal">
+    <li class="list-group-item">#534</li>
+    <li class="list-group-item"><img src="images/Like-01.png" alt=""></li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+    <li class="list-group-item"><img src="images/skull-crossbones-01.png" alt=""></li>
+  </ul>
+</div>
+</div>
+</div>
+
+<div class="card" id="Bonus-Area" style="width: 28rem;">
+  <img src="images/heading style.PNG" class="card-img-top" alt="" id="heading-container">
+  <img src="images/bonous-icon-01.png" alt="" id="Bonus-icon">
+  <h3 id="Bonus-name">Bonus Area</h3>
+  <div class="card" id="Bonus-box-container">
+   <div id="bonus-boxes">
+    <div>
+   <img  class="box-img icon-box" src="images/Orange-box.PNG" alt="">
+   <img src="images/start.png" alt="" style="height: 50px; width: 50px; position: absolute; margin-top: -149px;margin-left: 40px; background: transparent;">
+   <h4 style="color: white; margin-top: -55px; margin-left: 40px;">Start</h4>
+  </div>
+  <div>
+   <img  class="box-img icon-box" src="images/Pink-box.PNG" alt="">
+   <img src="images/Finish.PNG" alt="" style="height: 50px; width: 50px; position: absolute; margin-top: -149px;margin-left: 40px; background: transparent;">
+   <h4 style="color: white; margin-top: -55px; margin-left: 40px;">Finish</h4>
+  </div>
+  </div>
+</div>
+</div>
+
+<div class="card" id="Balance-container" style="width: 28rem">
+   <img src="images/heading style.PNG" id="heading-container" alt="">
+  <img id="Balance-icon" src="images/Pick-one-icon-01.png" alt="">
+  <h2 id="balance-name">Balances</h2>
+<div style="margin-left: 20px;">
+  <div style="height: 40px; width: 200px; color: white; display: inline-block; border: 1px solid rgb(255, 255, 255);padding: 10px;">Coustomer Balance # 1</div>
+  <div style="height: 40px; width: 200px; color: white;display: inline-block;border: 1px solid rgb(255, 255, 255); padding: 10px;">Coustomer Balance # 2</div>
+</div>
+<img src="images/WithDraw-box.PNG" alt="" style="height: 70px; width: 250px; position: relative; margin: auto;">
+<img src="images/WithDraw-icon-01.png" alt="" style="height: 50px; width: 50px; margin-left: 130px;position: absolute; margin-top: 190px;
+z-index: 10;">
+<h3 style="color: white; margin-left: 180px;
+position: absolute;margin-top: 200px;z-index: 10;">WithDraw</h3>
+
+</div>
+
+  </body>
+</html>
